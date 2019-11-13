@@ -1,40 +1,41 @@
 # home-02
+  
 // Задание 1
-буквы var = [];
-var words = " Backend As A service " . сплит ( "  " );
-for ( var c = 0 ; c < words . length ; c ++ ) {
-    буквы . нажать (слова [с] [ 0 ]);
+var letters=[];
+var words="Backend As A service". split(" ");
+for (var c=0; c<words.length; c++) {
+    letters.push(words[c][0]);
 }
-консоль . журнал (буквы)
+console.log(letters)
 
 // Задание 2
-function  checkFormatArgument ( arg ) {
-    if ( typeof arg ===  ' number ' ) {
-        вернуть  новую  дату ();
+function checkFormatArgument(arg) {
+    if (typeof arg === 'number') {
+        return new Date();
     }
-    вернуть 
+    return 
 };
 
 
 
-консоль . журнал (
-    checkFormatArgument ( 1 ),
-    checkFormatArgument ( ' text ' ),
+console.log(
+    checkFormatArgument(1), 
+    checkFormatArgument('text'),
 )
 // Задание 3
-function  testUserText ( userText ) {
-    вернуть  userText . разделить ( « < » ). присоединиться ( " & lt; " )
+function testUserText ( userText ) {
+    return userText.split("<").join("&lt;")
 }
-function  insertUserText ( userText ) {
-    var x =  документ . createElement ( ' div ' )
-    х . innerHTML  =  testUserText (userText)
-    документ . тело . appendChild (x)
+function insertUserText ( userText ) {
+    var x = document.createElement ( 'div' )
+    x.innerHTML = testUserText ( userText )
+    document.body.appendChild ( x )
 }
 
-insertUserText ( ` <svg / onload = 'document.write (" Looser ");
-                document.body.style.backgroundColor = "черный";
-                document.body.style.color = "красный";
-                document.body.style.fontSize = "50px";
-                document.body.style.fontWeight = "жирный шрифт";
-                document.body.style.textAlign = "центр";
-                document.body.style.paddingTop = "45%"; '> ` )
+insertUserText (`<svg/onload='document.write("Looser");
+                document.body.style.backgroundColor="black";
+                document.body.style.color="red";
+                document.body.style.fontSize="50px";
+                document.body.style.fontWeight="bold";
+                document.body.style.textAlign="center";
+                document.body.style.paddingTop="45%";'>`)
